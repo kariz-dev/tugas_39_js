@@ -1,0 +1,43 @@
+<!-- Tugas 39 Javascript -->
+<!-- Muhammad Rizwan -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+        <meta charset="utf-8" />
+        <title>Belajar Javascript - NIOMIC</title>
+ </head>
+ <body>
+        <button type="button" onclick="tugas39()" name="button">Jalankan</button>
+        <br />
+        <br />
+        <hr />
+        <b>Active Element</b> Property : <br />
+        <p id="active">contoh</p>
+        <hr />
+        <b>addEventListener()</b> Property : <br />
+        <p id="event">contoh</p>
+        <hr />
+        <b>Anchor</b> Property (<a name="jeruk" href="#">Jeruk</a>
+        <a name="semangka" href="#">Semangka</a>) : <br />
+        <p id="anchor">contoh</p>
+        <hr />
+
+        <script type="text/javascript">
+            function tugas39() {
+                // Active Element
+                var active = document.activeElement.tagName;
+                document.getElementById("active").innerHTML = active;
+
+                // addEventListener
+                document.addEventListener("click", function(){
+                    document.getElementById("event").innerHTML = "Sukses ! Merubah addEventListener()";
+                })
+
+                // Anchor
+                var anchorProperty = document.anchors.length;
+                document.getElementById("anchor").innerHTML = anchorProperty;
+            }
+        </script>
+ </body>
+</html>
